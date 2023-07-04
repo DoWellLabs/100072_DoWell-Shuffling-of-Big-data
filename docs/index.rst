@@ -3,10 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+<<<<<<< HEAD
+=======
+Welcome to Dowell Shuffling Big Data's documentation!
+=====================================================
+
+>>>>>>> b6d28ab (dowell shuffling big data library)
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+<<<<<<< HEAD
 Shuffling Big Data
 ==================
 
@@ -257,6 +264,8 @@ Methods:
                If it's the filename with no path, it get's store in your current working directory. 
 
                returns: an image file
+=======
+>>>>>>> b6d28ab (dowell shuffling big data library)
 
 
 Indices and tables
@@ -264,4 +273,8 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`modindex`
+<<<<<<< HEAD
 * :ref:`search`
+=======
+* :ref:`search`
+>>>>>>> b6d28ab (dowell shuffling big data library)
