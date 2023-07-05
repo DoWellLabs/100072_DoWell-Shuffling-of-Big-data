@@ -4,16 +4,22 @@
    contain the root `toctree` directive.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Welcome to Dowell Shuffling Big Data's documentation!
 =====================================================
 
 >>>>>>> b6d28ab (dowell shuffling big data library)
+=======
+>>>>>>> 3df8f63 (Initial Commit)
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3df8f63 (Initial Commit)
 Shuffling Big Data
 ==================
 
@@ -264,8 +270,11 @@ Methods:
                If it's the filename with no path, it get's store in your current working directory. 
 
                returns: an image file
+<<<<<<< HEAD
 =======
 >>>>>>> b6d28ab (dowell shuffling big data library)
+=======
+>>>>>>> 3df8f63 (Initial Commit)
 
 
 Indices and tables
@@ -274,7 +283,11 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 <<<<<<< HEAD
+<<<<<<< HEAD
 * :ref:`search`
 =======
 * :ref:`search`
 >>>>>>> b6d28ab (dowell shuffling big data library)
+=======
+* :ref:`search`
+>>>>>>> 3df8f63 (Initial Commit)
