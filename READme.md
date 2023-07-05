@@ -6,20 +6,22 @@ Welcome to the Dowell Shuffling Big Data Library. The Library is based on Dowell
 # Installation 
 
 It supports Python 3.5+. The requests package is needed. 
+No package yet. However you can clone the Dowell Shuffling Data Repository for the code. 
 
-``` bash
-pip install dowell-shuffling-big-data
-```
+
 # Features
 
 The Shuffling Big Data API offers the following features. 
-    : Getting shuffled data
-    : Get the graph data in an image format. 
+    - Getting shuffled data based on shuffling parameters. 
+    - Get the graph data of the shuffled data in an image format. 
+    - Get the means dataframe of the shuffled data
+    - Get the series dataframe of the shuffled data.
+
 
 
 # How it works
 
-# Preparing the Shuffling Paramters
+## Preparing the Shuffling Paramters
 
 The shuffling parameters consist of four paramters - deck, error , test_num and deck_items. 
 Deck is an integer user defined value that can be changed but should be greater than or equals to 100
@@ -39,7 +41,7 @@ params = {
 }
 
 ```
-# Output
+## Output
 
 The API returns json object with four keys - MeansDataframe, SeriesDataframe, OptimumSeries, graph_data
 OptimumSeries - This is shuffled data. 
@@ -48,14 +50,14 @@ Graph_data - It is returned as an image.
 
 # Usage
 
-# Import the ShufflingBig Data class
+## Import the ShufflingBig Data class
 
 ```python
 
 from shuffling_big_data import ShufflingBigData
 
 ```
-# Prepare the shuffling parameters
+## Prepare the shuffling parameters
 
 ```python
 
@@ -68,7 +70,7 @@ params = {
 
 ```
 
-# Instantiating the Shuffling Data Class
+## Instantiating the Shuffling Data Class
 
 The Data can be instantiated with with all the shuffling parameters set or not. However, it can't be shuffled without all the parameters set. 
 
@@ -89,7 +91,7 @@ Initialising without the all or any parameters set
 s2 = ShufflingData()
 ```
 
-# Working with the parameters
+## Working with the parameters
 
 Setting params attribute with a variable called params. The params variable has to be an dict with four keys. The four keys should be the keys mentioned in the 'Setting parameters section'
 
@@ -122,7 +124,7 @@ s1.deck_items = '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
 #sets the deck_items. If deck_items doesn't isn't a string with more than 60 comma separated items, it raises an error
 ```
 
-# Output 
+## Output 
 
 Getting the output from the Shuffling Big Data object passed with all parameters
 
@@ -142,3 +144,89 @@ s1.shuffle() #The shuffle method shuffles the data and returns the shuffled data
 ```
 
 
+
+# Classes
+
+## The 'ShufflingDataClass' Class
+
+The ShufflingBigData class is  a class that shuffles data based on some parameters. 
+It receives the number ID of each data points in a string along with other parameters and returns the output
+It returns a json object with four key values - means_dataframe, series_dataframe, optimumseries and base64 image. 
+The 'OptimumSeries' key returns the shuffled in a string format. The string contains a pair value of the index and 
+        
+        
+## Attributes:
+        :'params' params: A dictionary that contains four keys deck, error, test_num, deck_items
+            :key 'deck': A user defined integer that can be changed but should be >= 100
+            :key 'error': A user defined float number that can be changed. It must be a float object. 
+            :key 'test_num': A user defined integer. This is the number of times the data given is shuffled.
+            :key 'deck_items': A user defined iterable or strings containing iterables. This is the item that is shuffled 
+                    The deck_items needs to have at least 60 items in it. 
+
+        :'mean_dataframe':
+            returns the dataframe of th
+        
+        'series_dataframe':
+            returns the series dataframe
+        
+        :'all':
+            returns all the output
+
+        :'graph_data':
+            returns the graph data
+        
+        
+## Methods:
+    shuffle()
+            shuffles the ID numbers of the data point and returns the shuffled output.
+        
+    'response'
+            A property method that gets the shuffled data which is the response class. 
+        
+    'request_params':
+            getter property. The parameters used in shuffling the data can be return. 
+        
+    'request_params':
+            setter property. The parameters can be set using the setter property.
+        
+    'deck':
+            A property method that gets and sets the value of the deck parameter. 
+        
+    'error':
+            A property method that gets and sets the value of the error parameter
+        
+    'test_num':
+            A property method that gets and sets the value of the test_num parameter
+        
+    'deck_items':
+            A property method that gets and sets the value of the deck_items parameter
+            
+
+    Returns:
+        'Response': A json object that's returned to a python dictionary
+        The response includes the 
+
+# Response Class
+
+
+
+The 'Response' is a class that handles the shuffled data. 
+    
+
+## Attributes:
+        'response':dict
+            The shuffled data is passed as an argument to the initialization function
+
+
+## Methods:
+    
+        'shuffled_data()'
+                'returns': the suffled data
+                
+        'graph(filename:str = None)'
+                :args 'filename': A filename of the image. If it's an absolute or relative, it gets store there.
+                If it's the filename with no path, it get's store in your current working directory. 
+                
+                returns: an image file
+
+    
