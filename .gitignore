@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 shufflingdataenv/
-=======
-shufflindataenv/
->>>>>>> b6d28ab (dowell shuffling big data library)
+.image.png
 tests/
 shuffling_big_data/__pycache__/
-.image.png

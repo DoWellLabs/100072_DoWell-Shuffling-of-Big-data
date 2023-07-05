@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-=======
 from shuffling_big_data import ShufflingBigData
 
-from m2r import parse_from_file
-
-output = parse_from_file('READme.md')
-print(output)
-
-
-
-'''
 params = {
     "deck": 100, #user defined value can be change but should be >=100
     "error": 1.67, #value can change but should be a floating number
@@ -28,12 +18,17 @@ s1.response.series_dataframe # returns the series_dataframe
 #Initialising the Shuffling class without all the parameters set.
 s2 = ShufflingBigData()
 
+'''
 
     Parameters can be set as a whole
+'''
 
 s2.params = params
 
+
+'''
     Parameters can be set individually
+'''
 
 s2.error = 1.66 #setting the error parameter value
 s2.deck = 100 #setting the deck size. It must be more than 100
@@ -44,5 +39,4 @@ s2.deck_items = '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
 
 s2.shuffle()
 
-'''
->>>>>>> 3df8f63 (Initial Commit)
+
